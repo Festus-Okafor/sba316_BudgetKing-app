@@ -1,6 +1,7 @@
 body > h1{
     text-align: center;
     color: white;
+    font-size: 26px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -8,7 +9,7 @@ body > h1{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 30px;
+    margin-top:50px;
     margin-left: 10px;
     margin-right: 10px;
     color:whitesmoke;
@@ -17,27 +18,78 @@ body > h1{
 .cont1{
     height: 400px;
     width: 30%;
-    background-color: gray;
+    background-color: rgb(66, 121, 181);
     border-radius: 8px;
-
 }
-.cont2{
-    height: 400px;
+form {
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height:600px;
     width: 30%;
-    background-color: rgb(136, 18, 18);  
-      border-radius: 8px;  
-}
-.cont3{
-    height:340px;
-    width: 20%;
-    background-color: rgb(141, 167, 95);
-      border-radius: 4px;
+    background-color: rgb(24, 26, 28);
+      border-radius: 10px;
+      border: 1px solid blue;
     
 }
-p{
+p, h3, h2{
     text-align: center;
 }
-#selectTransaction{
-    display: flex;
-    justify-content: space-around;
+.cont3{
+    height: 400px;
+    width: 30%;
+    background-color: rgb(80, 125, 173);  
+      border-radius: 8px;  
 }
+button{
+    margin-top: 30px;
+    background-color: rgb(206, 191, 169);
+    padding: 8px;
+    color:blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    border: none;
+
+}
+#display{
+      text-align: center;
+      font-size:40px;
+      margin-top: 40px;
+      margin-bottom: 40px;;
+}
+
+#selectTransaction{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+  
+}
+
+
+/* #typeInAmount{
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-left: auto;
+} */
+ #typeInAmount{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap:120px;
+
+ }
+ #typeInAmount > input{
+    padding-left: 50px;
+     padding-right:50px;
+     padding-top: 20px;
+     background-color: rgb(168, 149, 149);
+     border-radius: 3px;
+     font-size: 28px;
+     text-align: center;
+
+ }

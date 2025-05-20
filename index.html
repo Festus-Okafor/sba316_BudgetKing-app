@@ -1,44 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BudgetKing</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
-</head>
-<body>
-    <h3>BudgetKing</h3>
+  </head>
+  <body>
+    <h1>BudgetKing</h1>
     <div class="main-cont">
-    <div class="cont1"> 
-    <h3>Expense</h3>
-    </div>
-    <div class="cont2">
-    <h3>Income</h3>
-    </div>
-    <div class="cont3">
-        <h2>Your Balance</h2>
-           <div id="display">$: 0.00</div>
-           <hr>
-       <p>Add Transaction</p>
+      <div class="cont1">
+        <h3>Expense List</h3>
+        <hr>
+      </div>
+   
+      <!--------------------->
+        <form>
+      <div class="cont2">
+            <h2>Transactions</h2>
+            <div id="display">$: 0.00</div>
 
-       <div id="selectTransaction>"> 
-        <label>type</label>
-        <select>
-            <option>Expense</option>
-            <option>Income</option>
-            <option>Balance</option>
-        </select>
-       </div>
-       
-       <div id="typeInAmount">
-         <label>Amount</label>
-         <input type="number" min="0" max="300" required="required">
-       </div>
-       <hr>
-       <button id="addTrans">Add Transaction</button>
+           <div>
+              <div id="newincome">new income</div>
+              <h3>$:0:00</h3>
+           </div>
+
+           <div id ="newxpense">
+               new expenditure
+           <h3>$: 0:00</h3>
+           </div>
+           <hr/>
+
+           <p>Add Transaction</p>
+     
+           <div id="selectTransaction>">
+           <label>type</label>
+           <select id="select">
+            <option value="Expense">Expense</option>
+            <option value="Income">Income</option>
+            <option value="Balance">Balance</option>
+           </select>
+           </div>
+          
+      
+          <div id="typeInAmount">
+          <label>Amount</label>
+           <input type="number"  id= "amountInput" placeholder="0:00" min="0" max="900" required="required" />
+           </div>
+           <hr />
+           <button type="submit" id="submitBtn">Add Transaction</button>
+           </div>
+          </form>
+           <!--------------------->
+
+
+      <div class="cont3">
+        <h3>Action Field</h3>
+        <hr>
+        <ul>
+            <li> Click the button below to update your Balance</li>
+            <button>Update Transaction</button>
+        </ul>
+         <ul>
+            <li> Click the button below to Add Expenses</li>
+            <button>Update Transaction</button>
+        </ul>
+      </div>
     </div>
-    </div> 
-</body>
+  </body>
 </html>
