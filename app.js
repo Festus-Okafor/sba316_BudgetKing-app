@@ -1,6 +1,6 @@
 
 const body = document.createElement('body');
-document.body.style.backgroundColor = "black";
+document.body.style.backgroundColor = "blue";
 const updateIncomeBtn = document.getElementById("updateIncomeBtn")
 const updateExpenseBtn = document.getElementById("updateExpenseBtn")
 const updateBalanceBtn = document.getElementById("updateBalanceBtn")
@@ -11,14 +11,20 @@ const submitBtn = document.getElementById("submitBtn")
 const new_income = document.getElementById("new_income")
   const new_expense = document.getElementById("new_expense")
   const selectElement = document.getElementById("select")
-  const selectedValue =  selectElement.value;
+  let selectedValue =  selectElement.value;
 
  //display = "";
- /* input.addEventListener('input' , function(e){
+  input.addEventListener('input' , function(e){
      display.textContent = e.target.value;
- }) */
+ }) 
 
-/* submitBtn.addEventListener('click' ,(e) =>{
+
+
+
+
+ submitBtn.addEventListener('click' ,(e) =>{
+   console.log(selectedValue)
+   selectedValue =  selectElement.value;
    if(selectedValue === "Income"){
       const value = input.value;
       const myIncome = Number(new_income.innerText)+ Number(value)
@@ -27,13 +33,14 @@ const new_income = document.getElementById("new_income")
       
 })
 submitBtn.addEventListener('click' ,(e) =>{
+   selectedValue =  selectElement.value;
    if(selectedValue === "Expense"){
       const value = input.value;
       const myExpense = Number(new_expense.innerText)+ Number(value)
       new_expense.innerText = myExpense;
-}}
- */
-
+}})
+ 
+ 
 
 
 
