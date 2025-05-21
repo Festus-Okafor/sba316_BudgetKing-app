@@ -12,65 +12,61 @@
     <div class="main-cont">
       <div class="cont1">
         <h3>Expense List</h3>
-        <hr>
+        <hr />
       </div>
-   
+
       <!--------------------->
-        
       <div class="cont2">
-            <h2>Transactions</h2>
-            <div id="display">$:0.00</div>
-
-           <div>
-              <div id="new_income">new income</div>
-              <h3>$:0:00</h3>
-           </div>
-
-           <div id ="new_expense">
-               new expenditure
-           <h3>$: 0:00</h3>
-           </div>
-           <hr/>
-
-           <p>Add Transaction</p>
-     
-           <div id="selectTransaction>">
-           <label>type</label>
-           <select id="select">
+        <h2>Transactions</h2>
+        <div id="display">$:0.00</div>
+        <h1>Income</h1>
+        <div id="new_income">0:00:</div>
+        <h1>Expenditure</h1>
+        <div id="new_expense">0:00:</div>
+        <hr />
+        <p>Add Transaction</p>
+        <div id="selectTransaction>">
+          <label>type</label>
+          <select id="select">
             <option value="Expense">Expense</option>
             <option value="Income">Income</option>
             <option value="Balance">Balance</option>
-           </select>
-           </div>
-          
-      
+          </select>
           <div id="typeInAmount">
-          <label>Amount</label>
-           <input type="number"  id= "amountInput" placeholder="0:00" min="0" max="900" required="required" />
-           </div>
-           <hr />
-           <button type="submit" id="submitBtn">Add Transaction</button>
-           </div>
-         
-           <!--------------------->
-
+            <label>Amount</label>
+            <input
+              type="number"
+              id="amountInput"
+              step="0.00"
+              placeholder="0:00"
+              min="5"
+              max="100"
+              required
+            />
+          </div>
+          <hr />
+          <button class="submitTransaction" id="submitBtn">
+            Add Transaction
+          </button>
+        </div>
+      </div>
+      <!--------------------->
 
       <div class="cont3">
         <h3>Action Field</h3>
-        <hr>
-         <ul>
-            <li> Click the button below to update your Balance</li>
-            <button>Update Income</button>
-        </ul>
-          <ul>
-            <li> Click the button below to Add Expenses</li>
-            <button>Update Expense</button>
+        <hr />
+        <ul>
+          <li>Click the button below to update your Balance</li>
+          <button id="updateIncomeBtn">Update Income</button>
         </ul>
         <ul>
-            <li> Click the button below to update your Balance</li>
-            <button>Update Balance</button>
+          <li>Click the button below to Add Expenses</li>
+          <button id="updatEexpenseBtn">Update Expense</button>
         </ul>
-       
+        <ul>
+          <li>Click the button below to update your Balance</li>
+          <button id="updateBalanceBtn">Update Balance</button>
+        </ul>
       </div>
     </div>
   </body>
