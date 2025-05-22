@@ -1,6 +1,6 @@
 
 const body = document.createElement('body');
-document.body.style.backgroundColor = "blue";
+document.body.style.backgroundColor = "white";
 const updateIncomeBtn = document.getElementById("updateIncomeBtn")
 const updateExpenseBtn = document.getElementById("updateExpenseBtn")
 const updateBalanceBtn = document.getElementById("updateBalanceBtn")
@@ -38,9 +38,67 @@ submitBtn.addEventListener('click' ,(e) =>{
       const value = input.value;
       const myExpense = Number(new_expense.innerText)+ Number(value)
       new_expense.innerText = myExpense;
-}})
+}
+})
+
+
+
+    let updateBtn = document.getElementById("show_update")
+    let modalBody = document.getElementById("myModal")
+    let saveDate = document.getElementsByClassName("saveData")
+    let close = document.getElementsByClassName("close")[0];
+
+  //add event listener & function to the button that opens the modal
+      updateBtn.onclick = function(){
+         modalBody.style.display = "block"
+      }
+      close.onclick = function(){
+      modalBody.style.display = "none"
+     }  
+     window.onclick = function(e){
+      if(e.target == modalBody){
+         modalBody.style.display = "none"
+      
+      }
+       
+     }
+      
+
+     
+    let update_ExpenseBtn = document.getElementById("update_expense")
+    let modal_Body = document.getElementById("myMoodal")
+    let save_Date = document.getElementsByClassName("saveData")
+    let e_close = document.getElementsByClassName("modal_close")[0];
+   
+
+    update_ExpenseBtn.onclick = function(){
+         modal_Body.style.display = "block"
+      }
+      e_close.onclick = function(){
+      modal_Body.style.display = "none"
+     }  
+     window.onclick = function(e){
+      if(e.target == modal_Body){
+         modal_Body.style.display = "none"
+      }
+
+     }
+  
+
+
+  /*  function showModal() {document.getElementById("myMoodal").style.display = "block";}
+//}
+    function saveData(){document.getElementById("myMoodal").style.display = "save"}
+    function close(){document.getElementById("myMoodal").style.display = "none"}
+    window.onclick = function(e){
+      if(e.target == document.document.getElementById("primaryBtn")){
+         document.document.getElementById("myMoodal").style.display = "none";
+      }
+    }
+     */
  
- 
+      
+
 
 
 
