@@ -68,7 +68,7 @@ submitBtn.addEventListener('click' ,(e) =>{
      
     let update_ExpenseBtn = document.getElementById("update_expense")
     let modal_Body = document.getElementById("myMoodal")
-    let save_Data = document.getElementsByClassName(".save_data")[0]
+    let save_Data = document.querySelector(".save_data")
     let e_close = document.getElementsByClassName("modal_close")[0];
    
 
@@ -85,7 +85,7 @@ submitBtn.addEventListener('click' ,(e) =>{
 
      }
     
-      saveData.addEventListener("click", (e) =>{
+         saveData.addEventListener("click", (e) =>{
          let iinput = document.getElementsByClassName("modal_iinput")[0].value
          let iamount = document.getElementsByClassName("modal_iamount")[0].value
          let description = `${iinput} ${iamount}`
@@ -94,14 +94,11 @@ submitBtn.addEventListener('click' ,(e) =>{
           expenseList.appendChild(newLi).style.backgroundColor = "lightGreen"
         
       })
-        save_Data.addEventListener("click", (e) =>{
-         
-         
+          save_Data.addEventListener("click", (e) =>{
          let X_pense = document.getElementsByClassName("modal_input")[0].value
          let X_amount = document.getElementsByClassName("modal_amount1")[0].value
          let New_description = `${X_pense}: ${X_amount}`
-
-          const newList = document.createElement("li")
+          const newLi = document.createElement("li")
           newLi.innerText = New_description;
           expenseList.appendChild(newLi).style.backgroundColor = "yellow"
        
