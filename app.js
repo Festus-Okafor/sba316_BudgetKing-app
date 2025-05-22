@@ -11,6 +11,7 @@ const submitBtn = document.getElementById("submitBtn")
 const new_income = document.getElementById("new_income")
   const new_expense = document.getElementById("new_expense")
   const selectElement = document.getElementById("select")
+  const expenseList = document.getElementsByClassName("cont1")[0]
   let selectedValue =  selectElement.value;
 
  //display = "";
@@ -45,7 +46,7 @@ submitBtn.addEventListener('click' ,(e) =>{
 
     let updateBtn = document.getElementById("show_update")
     let modalBody = document.getElementById("myModal")
-    let saveDate = document.getElementsByClassName("saveData")
+    let saveData = document.querySelector(".saveData")
     let close = document.getElementsByClassName("close")[0];
 
   //add event listener & function to the button that opens the modal
@@ -67,7 +68,7 @@ submitBtn.addEventListener('click' ,(e) =>{
      
     let update_ExpenseBtn = document.getElementById("update_expense")
     let modal_Body = document.getElementById("myMoodal")
-    let save_Date = document.getElementsByClassName("saveData")
+    let save_Data = document.getElementsByClassName(".save_data")[0]
     let e_close = document.getElementsByClassName("modal_close")[0];
    
 
@@ -83,20 +84,30 @@ submitBtn.addEventListener('click' ,(e) =>{
       }
 
      }
-  
+    
+      saveData.addEventListener("click", (e) =>{
+         let iinput = document.getElementsByClassName("modal_iinput")[0].value
+         let iamount = document.getElementsByClassName("modal_iamount")[0].value
+         let description = `${iinput} ${iamount}`
+          const newLi = document.createElement("li")
+          newLi.innerText = description;
+          expenseList.appendChild(newLi).style.backgroundColor = "lightGreen"
+        
+      })
+        save_Data.addEventListener("click", (e) =>{
+         
+         
+         let X_pense = document.getElementsByClassName("modal_input")[0].value
+         let X_amount = document.getElementsByClassName("modal_amount1")[0].value
+         let New_description = `${X_pense}: ${X_amount}`
 
+          const newList = document.createElement("li")
+          newLi.innerText = New_description;
+          expenseList.appendChild(newLi).style.backgroundColor = "yellow"
+       
+         
+      }) 
 
-  /*  function showModal() {document.getElementById("myMoodal").style.display = "block";}
-//}
-    function saveData(){document.getElementById("myMoodal").style.display = "save"}
-    function close(){document.getElementById("myMoodal").style.display = "none"}
-    window.onclick = function(e){
-      if(e.target == document.document.getElementById("primaryBtn")){
-         document.document.getElementById("myMoodal").style.display = "none";
-      }
-    }
-     */
- 
       
 
 
