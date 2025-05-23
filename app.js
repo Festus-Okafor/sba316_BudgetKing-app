@@ -1,6 +1,8 @@
 
 const body = document.createElement('body');
 document.body.style.backgroundColor = "white";
+
+
 const updateIncomeBtn = document.getElementById("updateIncomeBtn")
 const updateExpenseBtn = document.getElementById("updateExpenseBtn")
 const updateBalanceBtn = document.getElementById("updateBalanceBtn")
@@ -13,6 +15,8 @@ const new_income = document.getElementById("new_income")
   const selectElement = document.getElementById("select")
   const expenseList = document.getElementsByClassName("cont1")[0]
   let selectedValue =  selectElement.value;
+  let selectFirst =   selectElement.firstChild
+  let selectLast =  selectElement.lastChild
 
  //display = "";
   input.addEventListener('input' , function(e){
