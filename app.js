@@ -89,7 +89,7 @@ submitBtn.addEventListener('click' ,(e) =>{
          let iinput = document.getElementsByClassName("modal_iinput")[0].value
          let iamount = document.getElementsByClassName("modal_iamount")[0].value
          let description = `${iinput} ${iamount}`
-          const newLi = document.createElement("li")
+          let newLi = document.createElement("li")
           newLi.innerText = description;
           expenseList.appendChild(newLi).style.backgroundColor = "lightGreen"
         
@@ -98,15 +98,20 @@ submitBtn.addEventListener('click' ,(e) =>{
          let X_pense = document.getElementsByClassName("modal_input")[0].value
          let X_amount = document.getElementsByClassName("modal_amount1")[0].value
          let New_description = `${X_pense}: ${X_amount}`
-          const newLi = document.createElement("li")
+          let newLi = document.createElement("li")
           newLi.innerText = New_description;
           expenseList.appendChild(newLi).style.backgroundColor = "yellow"
        
          
       }) 
-
+       let li = document.querySelectorAll('li')
+        
+       for(let i = 0; i<li.length; i++){
+         console.log(li[i].split(" "))
+              let listArr = li[i].split(" ")
+              console.log(listArr)
       
-
+       } 
 
 
 
