@@ -105,12 +105,15 @@ submitBtn.addEventListener('click' ,(e) =>{
          
       }) 
        let li = document.querySelectorAll('li')
-        
+        let first_word = []
        for(let i = 0; i<li.length; i++){
-         console.log(li[i].split(" "))
-              let listArr = li[i].split(" ")
-              console.log(listArr)
-      
+         //console.log(li[i].split(" "))
+              let listArr = li[i].textContent.split(" ")
+             
+
+         // i can access the first word of each of the arrays like this 
+              console.log(listArr[0]);
+              
        } 
 
 
@@ -124,80 +127,6 @@ submitBtn.addEventListener('click' ,(e) =>{
 
 
 
-
-
-
-
-
- 
- //accessing the submit button
-  
-
-
-   //accessing the first child of the income parent 
-  
-
-  //accessing the first child of the expense parent 
- 
-  
-
-  //console.log(selectedValue)
-    //adding event listener to it
-    // comparing the user intension choice
-
-/* 
-    let incomeOutput = []; 
-    let sum = 0;
-  input.addEventListener('input', (e) =>{
-     if(selectedValue === "Income"){
-        input.value = new_expense;
-         sum += new_expense = newIncomeAmt
-         incomeOutput.push(newIncomeAmt);
-         //let new_expenseVal = new_expense.push(lastOfExpense.textContent = e.target.value)
-         lastOfIncome.textContent = incomeOutput;
-
-     }}) */
-    
-    /*  else if(selectedValue === "Income"){
-          lastOfIncome.textContent = e.target.value
-          e.preventDefault()
-     }  })
-      */
-   /* 
-  //update income 
-  let incomeArr = []
-    updateIncomeBtn.addEventListener('click' , (e) => {
-           <form id="updateIncome">
-           <input id="description" placeholder="type description here"/>
-           <input id="amount" placeholder="type Amount here"/>
-           <button type="submit">click</button>
-          </form>
-
-    })
- updateExpenseBtn.addEventListener('click' , (e) => {
-           <form id="updateIncome">
-           <input id="description" placeholder="type description here"/>
-           <input id="amount" placeholder="type Amount here"/>
-           <button type="submit">click</button>
-          </form>
-    })
-     updateExpenseBtn.addEventListener('click' , (e) => {
-           <form id="updateIncome">
-           <input id="description" placeholder="type description here"/>
-           <input id="amount" placeholder="type Amount here"/>
-           <button type="submit">click</button>
-          </form>
-    })
-
-    updateBalanceBtn.addEventListener('click' , (e) => {
-           <form id="updateIncome">
-           <input id="description" placeholder="type description here"/>
-           <input id="amount" placeholder="type Amount here"/>
-           <button type="submit">click</button>
-          </form>
-    })
-  
- */
 
 
 
